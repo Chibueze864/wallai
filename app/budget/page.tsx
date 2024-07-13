@@ -38,6 +38,9 @@ const Budget =  () => {
 
     fetchData();
   }, []); // Empty dependency array means this effect runs once on mount
+  const dataProps = { // make sure all required component's inputs/Props keys&types match
+    data: data
+  }
   return (
     <AuthWrapper>
 
@@ -63,7 +66,7 @@ const Budget =  () => {
                 Suggest adjustments to avoid overspending
             </p>
          
-            <Recommend data={data}/>
+            <Recommend {...dataProps} />
           </div>
           <div className="md:w-1/2">
             {/* SVG content */}
