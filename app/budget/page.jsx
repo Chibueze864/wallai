@@ -93,7 +93,7 @@ const Budget =  () => {
             </tr>
           </thead>
            <tbody>
-            { Array.isArray(data)  && data?.map(( transaction: Transaction, index: number) => (
+            { Array.isArray(data)  && data?.map(( transaction, index) => (
               <tr key={transaction?.id} className="focus-within:bg-gray-200 overflow-hidden">
                 <td className="border-t">
                   <span className="text-gray-700 px-6 py-4 flex items-center">{index+1}</span>
