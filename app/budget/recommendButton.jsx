@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import ProductModal from './recommendModal';
 
-const Recommend: React.FC = ({data}) => {
+const Recommend = ({data}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
