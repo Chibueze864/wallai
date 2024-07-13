@@ -11,6 +11,8 @@ import Recommend from "./recommendButton";
 import { useExpenseData } from '../ExpenseContext'; // Adjust the import path as necessary
 import AuthWrapper from '../AuthWrapper';
 
+
+
 const Budget =  () => {
   const [data, setData] = useState([]);
 
@@ -38,9 +40,8 @@ const Budget =  () => {
 
     fetchData();
   }, []); // Empty dependency array means this effect runs once on mount
-  const dataProps = { // make sure all required component's inputs/Props keys&types match
-    data: data
-  }
+  
+  
   return (
     <AuthWrapper>
 
