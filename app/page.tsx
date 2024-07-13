@@ -1,113 +1,504 @@
 import Image from "next/image";
+import Navbar from "../public/components/Navbar"
+import Footer from "../public/components/Footer"
+import AuthWrapper from './AuthWrapper';
 
 export default function Home() {
+  
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <AuthWrapper>
+
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <div className="bg-indigo-900 md:overflow-hidden">
+          <div className="px-4 py-20 md:py-4">
+            <div className="md:max-w-6xl md:mx-auto">
+              <div className="md:flex md:flex-wrap">
+                <div className="md:w-1/2 text-center md:text-left md:pt-16">
+                  <h1
+                    className="font-bold text-white text-2xl md:text-5xl leading-tight mb-4"
+                  >
+                    Wallai
+                  </h1>
+
+                  <p className="text-indigo-200 md:text-xl md:pr-48">
+                    Your personalized AI assistant for your finances. Make smarter financial decisions with Wallai and achieve your financial goals.
+                  </p>
+
+                  <a
+                    href="/budget"
+                    className="mt-6 mb-12 md:mb-0 md:mt-10 inline-block py-3 px-8 text-white bg-gray-800 hover:bg-gray-500 rounded-lg shadow"
+                    >Get Started</a
+                  >
+                </div>
+                <div className="md:w-1/2 bg-indigo-900 relative">
+                  <div className="hidden md:block">
+                    <div
+                      className="-ml-24 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
+                      style={{transform: "rotate(-8deg)"}}
+                    >
+                      <div
+                        className="bg-indigo-800 mx-auto rounded-lg px-2 pb-2 relative mb-8"
+                      >
+                        <div className="mb-1">
+                          <span
+                            className="w-1 h-1 bg-indigo-100 rounded-full inline-block"
+                            style={{marginRight: "1px"}}
+                          ></span
+                          ><span
+                            className="w-1 h-1 bg-indigo-100 rounded-full inline-block"
+                            style={{marginRight: "1px"}}
+                          ></span
+                          ><span
+                            className="w-1 h-1 bg-indigo-100 rounded-full inline-block"
+                          ></span>
+                        </div>
+                        <div className="h-1 w-12 bg-indigo-100 rounded mb-1"></div>
+                        <div className="h-1 w-10 bg-indigo-100 rounded mb-2"></div>
+
+                        <div className="flex">
+                          <div className="w-6 h-3 rounded bg-indigo-100 mr-1"></div>
+                          <div className="w-6 h-3 rounded bg-indigo-100"></div>
+                        </div>
+
+                        <div
+                          className="-mr-2 -mb-4 absolute bottom-0 right-0 h-16 w-10 rounded-lg bg-green-700 border-2 border-white"
+                        ></div>
+                        <div
+                          className="w-2 h-2 rounded-full bg-green-800 mx-auto absolute bottom-0 right-0 mr-2 -mb-2 z-10 border-2 border-white"
+                        ></div>
+                      </div>
+
+                      <div className="text-gray-800 text-center">
+                        Savings <br /> Tips
+                      </div>
+                    </div>
+
+                    <div
+                      className="ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8"
+                      style={{transform: "rotate(-8deg)", zIndex: 2}}
+                    >
+                      <div
+                        className="bg-indigo-800 mx-auto rounded-lg relative mb-8 py-2 w-20 border-2 border-white"
+                      >
+                        <div
+                          className="h-8 bg-green-700 w-8 rounded absolute left-0 top-0 -mt-3 ml-4"
+                          style={{transform: "rotate(-45deg)", zIndex: "-1"}}
+                        ></div>
+                        <div
+                          className="h-8 bg-green-800 w-8 rounded absolute left-0 top-0 -mt-3 ml-8"
+                          style={{transform: "rotate(-12deg)", zIndex: -2}}
+                        ></div>
+
+                        <div
+                          className="flex items-center justify-center h-6 bg-indigo-800 w-6 rounded-l-lg ml-auto border-4 border-white -mr-1"
+                        >
+                          <div
+                            className="h-2 w-2 rounded-full bg-indigo-800 border-2 border-white"
+                          ></div>
+                        </div>
+
+                        <div
+                          className="w-8 h-8 bg-green-700 border-4 border-white rounded-full -ml-3 -mb-5"
+                        ></div>
+                      </div>
+
+                      <div className="text-gray-800 text-center">
+                        Budget Analysis
+                      </div>
+                    </div>
+
+                    <div
+                      className="ml-32 absolute left-0 bottom-0 w-48 bg-white rounded-lg shadow-lg px-10 py-8"
+                      style={{transform: "rotate(-8deg)", zIndex: 2, marginBottom: "-220px"}}
+                    >
+                      <div
+                        className="bg-indigo-800 mx-auto rounded-lg pt-4 mb-16 relative"
+                      >
+                        <div className="h-4 bg-white"></div>
+
+                        <div className="text-right my-2 pb-1">
+                          <div
+                            className="inline-flex w-3 h-3 rounded-full bg-white -mr-2"
+                          ></div>
+                          <div
+                            className="inline-flex w-3 h-3 rounded-full bg-indigo-800 border-2 border-white mr-2"
+                          ></div>
+                        </div>
+
+                        <div
+                          className="-ml-4 -mb-6 absolute left-0 bottom-0 w-16 bg-green-700 mx-auto rounded-lg pb-2 pt-3"
+                        >
+                          <div className="h-2 bg-white mb-2"></div>
+                          <div className="h-2 bg-white w-6 ml-auto rounded mr-2"></div>
+                        </div>
+                      </div>
+
+                      <div className="text-gray-800 text-center">
+                        Expense <br />Tracking
+                      </div>
+                    </div>
+
+                    <div
+                      className="mt-10 w-full absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden shadow-lg"
+                      style={{transform: "rotate(-8deg)", marginRight: "-250px", zIndex: 1}}
+                    >
+                      <div className="w-32 bg-gray-200" style={{height: "560px"}}></div>
+                      <div className="flex-1 p-6">
+                        <h2 className="text-lg text-gray-700 font-bold mb-3">
+                          Popular Payments
+                        </h2>
+                        <div className="flex mb-5">
+                          <div className="w-16 rounded-full bg-gray-100 py-2 px-4 mr-2">
+                            <div className="p-1 rounded-full bg-gray-300"></div>
+                          </div>
+                          <div className="w-16 rounded-full bg-gray-100 py-2 px-4 mr-2">
+                            <div className="p-1 rounded-full bg-gray-300"></div>
+                          </div>
+                          <div className="w-16 rounded-full bg-gray-100 py-2 px-4 mr-2">
+                            <div className="p-1 rounded-full bg-gray-300"></div>
+                          </div>
+                          <div className="w-16 rounded-full bg-gray-100 py-2 px-4">
+                            <div className="p-1 rounded-full bg-gray-300"></div>
+                          </div>
+                        </div>
+
+                        <div className="flex flex-wrap -mx-4 mb-5">
+                          <div className="w-1/3 px-4">
+                            <div className="h-40 rounded-lg bg-white shadow-lg p-6">
+                              <div
+                                className="w-16 h-16 rounded-full bg-gray-200 mb-6"
+                              ></div>
+                              <div
+                                className="h-2 w-16 bg-gray-200 mb-2 rounded-full"
+                              ></div>
+                              <div className="h-2 w-10 bg-gray-200 rounded-full"></div>
+                            </div>
+                          </div>
+                          <div className="w-1/3 px-4">
+                            <div className="h-40 rounded-lg bg-white shadow-lg p-6">
+                              <div
+                                className="w-16 h-16 rounded-full bg-gray-200 mb-6"
+                              ></div>
+                              <div
+                                className="h-2 w-16 bg-gray-200 mb-2 rounded-full"
+                              ></div>
+                              <div className="h-2 w-10 bg-gray-200 rounded-full"></div>
+                            </div>
+                          </div>
+                          <div className="w-1/3 px-4">
+                            <div className="h-40 rounded-lg bg-white shadow-lg p-6">
+                              <div
+                                className="w-16 h-16 rounded-full bg-gray-200 mb-6"
+                              ></div>
+                              <div
+                                className="h-2 w-16 bg-gray-200 mb-2 rounded-full"
+                              ></div>
+                              <div className="h-2 w-10 bg-gray-200 rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <h2 className="text-lg text-gray-700 font-bold mb-3">
+                          Popular Payments
+                        </h2>
+
+                        <div
+                          className="w-full flex flex-wrap justify-between items-center border-b-2 border-gray-100 py-3"
+                        >
+                          <div className="w-1/3">
+                            <div className="flex">
+                              <div className="h-8 w-8 rounded bg-gray-200 mr-4"></div>
+                              <div>
+                                <div
+                                  className="h-2 w-16 bg-gray-200 mb-1 rounded-full"
+                                ></div>
+                                <div
+                                  className="h-2 w-10 bg-gray-100 rounded-full"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="w-1/3">
+                            <div
+                              className="w-16 rounded-full bg-green-100 py-2 px-4 mx-auto"
+                            >
+                              <div className="p-1 rounded-full bg-green-200"></div>
+                            </div>
+                          </div>
+                          <div className="w-1/3">
+                            <div
+                              className="h-2 w-10 bg-gray-100 rounded-full mx-auto"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div
+                          className="flex flex-wrap justify-between items-center border-b-2 border-gray-100 py-3"
+                        >
+                          <div className="w-1/3">
+                            <div className="flex">
+                              <div className="h-8 w-8 rounded bg-gray-200 mr-4"></div>
+                              <div>
+                                <div
+                                  className="h-2 w-16 bg-gray-200 mb-1 rounded-full"
+                                ></div>
+                                <div
+                                  className="h-2 w-10 bg-gray-100 rounded-full"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="w-1/3">
+                            <div
+                              className="w-16 rounded-full bg-orange-100 py-2 px-4 mx-auto"
+                            >
+                              <div className="p-1 rounded-full bg-orange-200"></div>
+                            </div>
+                          </div>
+                          <div className="w-1/3">
+                            <div
+                              className="h-2 w-16 bg-gray-100 rounded-full mx-auto"
+                            ></div>
+                          </div>
+                        </div>
+
+                        <div
+                          className="flex flex-wrap justify-between items-center border-b-2 border-gray-100 py-3"
+                        >
+                          <div className="w-1/3">
+                            <div className="flex">
+                              <div className="h-8 w-8 rounded bg-gray-200 mr-4"></div>
+                              <div>
+                                <div
+                                  className="h-2 w-16 bg-gray-200 mb-1 rounded-full"
+                                ></div>
+                                <div
+                                  className="h-2 w-10 bg-gray-100 rounded-full"
+                                ></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="w-1/3">
+                            <div
+                              className="w-16 rounded-full bg-blue-100 py-2 px-4 mx-auto"
+                            >
+                              <div className="p-1 rounded-full bg-blue-200"></div>
+                            </div>
+                          </div>
+                          <div className="w-1/3">
+                            <div
+                              className="h-2 w-8 bg-gray-100 rounded-full mx-auto"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      className="w-full absolute left-0 bottom-0 ml-1"
+                      style={{transform: "rotate(-8deg)", zIndex: 1, marginBottom: "-360px"}}
+                    >
+                      <div className="grid--gray h-48 w-48"></div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="md:hidden w-full absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden shadow"
+                  >
+                    <div
+                      className="h-4 bg-gray-200 absolute top-0 left-0 right-0 rounded-t-lg flex items-center"
+                    >
+                      <span
+                        className="h-2 w-2 rounded-full bg-red-500 inline-block mr-1 ml-2"
+                      ></span>
+                      <span
+                        className="h-2 w-2 rounded-full bg-orange-400 inline-block mr-1"
+                      ></span>
+                      <span
+                        className="h-2 w-2 rounded-full bg-green-500 inline-block mr-1"
+                      ></span>
+                    </div>
+                    <div className="w-32 bg-gray-100 px-2 py-8" style={{height: "340px"}}>
+                      <div className="h-2 w-16 bg-gray-300 rounded-full mb-4"></div>
+                      <div className="flex items-center mb-4">
+                        <div
+                          className="h-5 w-5 rounded-full bg-gray-300 mr-3 flex-shrink-0"
+                        ></div>
+                        <div>
+                          <div className="h-2 w-10 bg-gray-300 rounded-full"></div>
+                        </div>
+                      </div>
+
+                      <div className="h-2 w-16 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-10 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-20 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-6 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-16 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-10 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-20 bg-gray-200 rounded-full mb-2"></div>
+                      <div className="h-2 w-6 bg-gray-200 rounded-full mb-2"></div>
+                    </div>
+                    <div className="flex-1 px-4 py-8">
+                      <h2 className="text-xs text-gray-700 font-bold mb-1">
+                        Popular Payments
+                      </h2>
+                      <div className="flex mb-5">
+                        <div className="p-2 w-12 rounded-full bg-gray-100 mr-2"></div>
+                        <div className="p-2 w-12 rounded-full bg-gray-100 mr-2"></div>
+                        <div className="p-2 w-12 rounded-full bg-gray-100 mr-2"></div>
+                        <div className="p-2 w-12 rounded-full bg-gray-100 mr-2"></div>
+                      </div>
+
+                      <div className="flex flex-wrap -mx-2 mb-5">
+                        <div className="w-1/3 px-2">
+                          <div className="p-3 rounded-lg bg-white shadow">
+                            <div
+                              className="w-6 h-6 rounded-full bg-gray-200 mb-2"
+                            ></div>
+                            <div
+                              className="h-2 w-10 bg-gray-200 mb-1 rounded-full"
+                            ></div>
+                            <div className="h-2 w-6 bg-gray-200 rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="w-1/3 px-2">
+                          <div className="p-3 rounded-lg bg-white shadow">
+                            <div
+                              className="w-6 h-6 rounded-full bg-gray-200 mb-2"
+                            ></div>
+                            <div
+                              className="h-2 w-10 bg-gray-200 mb-1 rounded-full"
+                            ></div>
+                            <div className="h-2 w-6 bg-gray-200 rounded-full"></div>
+                          </div>
+                        </div>
+                        <div className="w-1/3 px-2">
+                          <div className="p-3 rounded-lg bg-white shadow">
+                            <div
+                              className="w-6 h-6 rounded-full bg-gray-200 mb-2"
+                            ></div>
+                            <div
+                              className="h-2 w-10 bg-gray-200 mb-1 rounded-full"
+                            ></div>
+                            <div className="h-2 w-6 bg-gray-200 rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <h2 className="text-xs text-gray-700 font-bold mb-1">
+                        Popular Payments
+                      </h2>
+
+                      <div
+                        className="w-full flex flex-wrap justify-between items-center border-b-2 border-gray-100 py-3"
+                      >
+                        <div className="w-1/3">
+                          <div className="flex">
+                            <div
+                              className="h-5 w-5 rounded-full bg-gray-200 mr-3 flex-shrink-0"
+                            ></div>
+                            <div>
+                              <div
+                                className="h-2 w-16 bg-gray-200 mb-1 rounded-full"
+                              ></div>
+                              <div className="h-2 w-10 bg-gray-100 rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="w-1/3">
+                          <div
+                            className="w-16 rounded-full bg-green-100 py-2 px-4 mx-auto"
+                          >
+                            <div className="p-1 rounded-full bg-green-200"></div>
+                          </div>
+                        </div>
+                        <div className="w-1/3">
+                          <div
+                            className="h-2 w-10 bg-gray-100 rounded-full mx-auto"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <div className="flex flex-wrap justify-between items-center py-3">
+                        <div className="w-1/3">
+                          <div className="flex">
+                            <div
+                              className="h-5 w-5 rounded-full bg-gray-200 mr-3 flex-shrink-0"
+                            ></div>
+                            <div>
+                              <div
+                                className="h-2 w-16 bg-gray-200 mb-1 rounded-full"
+                              ></div>
+                              <div className="h-2 w-10 bg-gray-100 rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="w-1/3">
+                          <div
+                            className="w-16 rounded-full bg-orange-100 py-2 px-4 mx-auto"
+                          >
+                            <div className="p-1 rounded-full bg-orange-200"></div>
+                          </div>
+                        </div>
+                        <div className="w-1/3">
+                          <div
+                            className="h-2 w-16 bg-gray-100 rounded-full mx-auto"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="mr-3 md:hidden absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-10 py-6"
+                    style={{zIndex: 2, marginBottom: "-380px"}}
+                  >
+                    <div
+                      className="bg-indigo-800 mx-auto rounded-lg w-20 pt-3 mb-12 relative"
+                    >
+                      <div className="h-3 bg-white"></div>
+
+                      <div className="text-right my-2">
+                        <div
+                          className="inline-flex w-3 h-3 rounded-full bg-white -mr-2"
+                        ></div>
+                        <div
+                          className="inline-flex w-3 h-3 rounded-full bg-indigo-800 border-2 border-white mr-2"
+                        ></div>
+                      </div>
+
+                      <div
+                        className="-ml-4 -mb-6 absolute left-0 bottom-0 w-16 bg-green-700 mx-auto rounded-lg pb-2 pt-3"
+                      >
+                        <div className="h-2 bg-white mb-2"></div>
+                        <div className="h-2 bg-white w-6 ml-auto rounded mr-2"></div>
+                      </div>
+                    </div>
+
+                    <div className="text-gray-800 text-center text-sm">
+                      Financial <br /> Health
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <svg
+            className="fill-current text-white hidden md:block"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            <path fill-opacity="1" d="M0,224L1440,32L1440,320L0,320Z"></path>
+          </svg>
         </div>
-      </div>
+      </main>
+      
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      
+      <Footer />
+    </div>
+    </AuthWrapper>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
-}
+);}
