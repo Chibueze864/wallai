@@ -67,7 +67,7 @@ const Budget =  () => {
                 Suggest adjustments to avoid overspending
             </p>
          
-            <Recommend {...dataProps} />
+            <Recommend data={data} />
           </div>
           <div className="md:w-1/2">
             {/* SVG content */}
